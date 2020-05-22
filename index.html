@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <style>
+      div.a{
+width:675px;
+height:50%;
+  border-radius: 25px;
+  border: 5px solid #ffffff;
+  background-color:#8b0000;
+  padding: 20px; 
+  padding-bottom: -10px;
+  font-size:48px;
+  margin:auto;
+}
+
+div.c{
+width:100%;
+height:22%;
+background-color:#55AAFF;
+margin:auto;
+margin-left:auto;	
+
+}
+div.b{
+font-size:36px;
+font-weight:bold;
+background-color: #55AAFF;
+}
+
+div.d{
+font-size:28px;
+font-weight:bold;
+background-color: #55AAFF;
+}
+
+textarea {
+  width: 50%;
+  height:200px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=text] , select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+input[type=text]:hover{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1.5px solid #8b0000;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+textarea:hover{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1.5px solid #8b0000;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+select:hover{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1.5px solid #8b0000;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+#btn{
+  width: 50%;
+  background-color: #8b0000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size:20px;
+  font-weight:bold;
+  padding
+}
+input[type=file] {
+  width: 50%;
+  background-color: #8b0000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size:20px;
+  font-weight:bold;
+}
+
+#btn:hover {
+  background-color: #000000;
+
+}
+div.e{
+width:100%;
+height:18%;
+background-color:#8b0000;
+font-size:15px;
+color:white;  
+}
+div.d{
+font-size:28px;
+font-weight:bold; 
+}
+
+    
+    </style>
+  </head>
+ <body>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+  <div class="c"><div class="a"><b><font face='ARIAL' color=#42cef5><center>
+&nbsp&nbsp  Place Your Order Here</center>
+</font></b></div></div>
+<center><div class="b">&nbsp;&nbsp;&nbsp;
+<font face='open sans' color=#000000>
+<br>Share Required Field In Detail.<br><br><br>
+</div></center>
+
+
+
+
+
+
+
+
+
+<div class="d">
+<form >
+    
+    <center><label for="fname">User Id</label><br><input type="text" id="username1" placeholder="Your User Id..."><br><br></center>
+
+
+<center>
+     <label for="state">Select Category</label><br>
+     <select id="username2" name="state">
+      <option value=ss>--- Select Category ---</option>
+      <option value=tn>Medecine</option>
+      <option value="kr">Grocery</option>
+      <option value=mh>Vegetables</option>
+      <option value=gj>Dairy product</option>
+      
+    </select><br><br></center>
+
+<center>
+     <label for="state">Select Area</label><br>
+     <select id="username3" name="state">
+      <option value=ss>--- Select Area ---</option>
+      <option value=tn>a</option>
+      <option value="kr">b</option>
+      <option value=mh>c</option>
+      <option value=gj>d</option>
+      <option value=e>e</option>
+      <option value=f>f</option>
+      <option value=g>h</option>
+      <option value=i>j</option>
+      <option value=k>l</option>
+      
+    </select><br><br></center>
+
+
+
+
+
+
+    <center>
+    <label for="mc">Address</label><br>
+<textarea placeholder="your Complete Address." id="username4"></textarea>
+<br></center>
+
+
+<center>
+    <label for="mc">Product Information(With quantity)</label><br>
+<textarea placeholder="Please Provide as many deatils as possible ." id="username5"></textarea>
+<br></center>
+
+
+
+<center>
+   <label >Your Email</label><br>
+<input type="text" id="username6" placeholder="Your EMAIL">
+<br><br></center>
+
+
+<center>
+    <label>contact_no:</label><br>
+    <input type="text" id="username7"><br></center><br><br>
+
+
+
+   <center> <button id="btn">Submit</button></center><br><br><br>
+
+</form>
+</div>
+    
+    
+    
+    
+    <script>
+        document.getElementById("btn").addEventListener("click",doStuff);
+        function doStuff(){
+           var uname1= document.getElementById("username1").value;
+           var uname2= document.getElementById("username2").value;
+           var uname3= document.getElementById("username3").value;
+           var uname4= document.getElementById("username4").value;
+           var uname5= document.getElementById("username5").value;
+           var uname6= document.getElementById("username6").value;
+          var uname7= document.getElementById("username7").value;
+           google.script.run.userClicked(uname1,uname2,uname3,uname4,uname5,uname6,uname7);
+           document.getElementById("username1").value="";
+           document.getElementById("username2").value="";
+           document.getElementById("username3").value="";
+           document.getElementById("username4").value="";
+           document.getElementById("username5").value="";
+           document.getElementById("username6").value="";
+           document.getElementById("username7").value="";
+             
+           
+        
+        }
+    
+    </script>
+  </body>
+</html>
+
+
